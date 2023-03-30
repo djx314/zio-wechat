@@ -15,7 +15,7 @@ object EndpointTest extends App {
   implicit val backend: SttpBackend[Identity, Nothing, NothingT] = HttpURLConnectionBackend()
 
   //  val accessTokenRequest = accessToken.toSttpRequest(uri"https://api.weixin.qq.com").apply(("client_credential", "wx3595fa5d8cafd522", "a53837bd6f161226111efe79c4f0445a"))
-  val accessTokenRequest = accessToken.toSttpRequest(uri"https://api.weixin.qq.com").apply(("client_credential", "wxaf99fd18d929117e", "bd46a71de4f309bc20fc98fb144b7e30"))
+  val accessTokenRequest = accessToken.toSttpRequest(uri"https://api.weixin.qq.com").apply(("client_credential", "Not_to_use_wxaf99fd18d929117e", "Not_to_use_bd46a71de4f309bc20fc98fb144b7e30"))
   val result = accessTokenRequest.send().body
 
   println(result)
